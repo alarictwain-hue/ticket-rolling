@@ -1,0 +1,17 @@
+{
+  "name": "yorushika-ticket-assist",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "build": "npm run build -w apps/web",
+    "build:web": "npm run build -w apps/web",
+    "start": "npm run start -w apps/api"
+  }
+}

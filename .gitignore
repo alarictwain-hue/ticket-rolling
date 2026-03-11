@@ -1,0 +1,6 @@
+node_modules/
+apps/web/dist/
+apps/api/data/app.db
+apps/api/data/app.db-shm
+apps/api/data/app.db-wal
+.env
