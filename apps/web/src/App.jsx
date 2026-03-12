@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
-const apiBase = import.meta.env.VITE_API_BASE_URL || "";
+const basePath = import.meta.env.BASE_URL || "/";
+const apiBase = import.meta.env.VITE_API_BASE_URL || basePath;
 
 const emptyRegister = {
   displayName: "",
