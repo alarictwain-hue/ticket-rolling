@@ -91,6 +91,33 @@ docker run -d ^
 
 如果你在 Linux 服务器上部署，把卷挂载语法改成 Linux 风格路径即可。
 
+## 一键更新
+
+服务器上可使用脚本：
+
+- `scripts/update-ticket-rolling.sh`
+
+典型用法：
+
+```bash
+cd /home/ritel/apps/ticket-rolling
+bash scripts/update-ticket-rolling.sh
+```
+
+它会自动执行：
+
+- `git pull --ff-only`
+- `docker build`
+- 替换旧容器
+- 启动新容器
+- 本机健康检查
+
+如果你的域名或端口不同，也可以临时覆盖：
+
+```bash
+ALLOWED_ORIGIN=https://ritelt.com HOST_PORT=8790 bash scripts/update-ticket-rolling.sh
+```
+
 ## Nginx 反代建议
 
 可将域名反代到 Node 服务：
