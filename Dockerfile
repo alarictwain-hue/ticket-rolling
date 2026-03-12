@@ -2,6 +2,9 @@ FROM node:24-bookworm-slim AS build
 
 WORKDIR /app
 
+ARG VITE_BASE_PATH=/
+ENV VITE_BASE_PATH=$VITE_BASE_PATH
+
 COPY package.json package-lock.json ./
 COPY apps/api/package.json apps/api/package.json
 COPY apps/web/package.json apps/web/package.json
