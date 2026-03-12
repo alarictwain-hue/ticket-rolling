@@ -41,6 +41,6 @@ echo "[5/6] Waiting for service"
 sleep 3
 
 echo "[6/6] Health check"
-curl -fsS "http://127.0.0.1:${HOST_PORT}${BASE_PATH}health"
+curl -fsS "http://127.0.0.1:${HOST_PORT}/health"
 echo
 echo "Update complete."
